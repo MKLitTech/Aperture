@@ -1,5 +1,6 @@
 import SwiftUI
 import LockedCameraCapture
+import AVFoundation
 
 @main
 struct ApertureApp: App {
@@ -9,6 +10,7 @@ struct ApertureApp: App {
         WindowGroup {
             MainView()
                 .environmentObject(store)
+                .task { _ = await AVCaptureDevice.requestAccess(for: .video) }
                 .onContinueUserActivity(NSUserActivityTypeLockedCameraCapture) { _ in
                     // Camera Control was pressed -> run whatever the user configured.
                     Task { @MainActor in

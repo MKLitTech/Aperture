@@ -36,3 +36,11 @@ Free Apple IDs expire sideloaded apps every 7 days, so re-sign weekly.
 The extension's Info.plist (`EXExtensionPointIdentifier: com.apple.lockedcamera-capture`) and product
 type were written without Xcode to test against. If Aperture doesn't appear under Camera Control,
 compare against Apple's "Capturing photos from the Lock Screen" sample project.
+
+## v2 test build notes
+
+- Bundle IDs are pre-suffixed with the free team ID (`9T9VN4DRHQ`) so the extension ID matches its parent.
+  If your sideloader appends the team ID again, the install will fail the same way. Report the exact error.
+- If SideStore/AltStore asks whether to keep app extensions, choose **Keep**.
+- On first launch, allow camera access. Then check Settings > Camera > Camera Control for Aperture.
+- Delete any older Aperture / Cam Launcher install first.

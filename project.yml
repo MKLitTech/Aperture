@@ -15,7 +15,7 @@ targets:
     sources: [Aperture]
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.mklittech.aperture
+        PRODUCT_BUNDLE_IDENTIFIER: com.mklittech.aperture.9T9VN4DRHQ
         TARGETED_DEVICE_FAMILY: "1"
     info:
       path: Config/App-Info.plist
@@ -64,10 +64,11 @@ targets:
     sources: [ApertureCapture]
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.mklittech.aperture.capture
+        PRODUCT_BUNDLE_IDENTIFIER: com.mklittech.aperture.9T9VN4DRHQ.capture
     info:
       path: Config/Capture-Info.plist
       properties:
         CFBundleDisplayName: Aperture
+        NSCameraUsageDescription: Aperture registers as a camera app so Camera Control can launch it.
         EXAppExtensionAttributes:
           EXExtensionPointIdentifier: com.apple.lockedcamera-capture
